@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Top Beer Locator</title>
+    <!-- Style Links-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Monda|Oswald|Vast+Shadow" rel="stylesheet">
+
+    <!-- Script Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="beerapi.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy2Pkt1JzTyRV-mhGHqpARFbovXj-auME&libraries=places&callback=initMap"
+        async defer></script>
+        <script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+
+    <script src="map.js" type="text/javascript"></script>
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->  
+<body>
+    <!-- =======================NAVBAR =========================-->
+    <div>
+        <div class="row">
+            <div class="col-md">
+    
+                <nav class="navbar text-center">
+                    <h1 class="text-center">
+                        <h1>CHEERS</h1>
+                        <h5 id="for">for</h5>
+                        <h1>BEERS</h1>
+                        <span class="typcn typcn-beer"></span>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- =======================MAP ============================-->
+    <div id="wrapper"><div id="map"></div></div>
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+    <div id="infowindow-content">
+        <span id="place-name" class="title"></span>
+        <br>
+        <hr>   
+        <span id="place-address"></span>
+    </div>
+    <!-- ====================== BUTTONS ========================-->
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sortbar">
+            <a class="navbar-brand" href="#">Sort by:</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" id="rank">
+                        <a class="nav-link" href="#">Rank </a>
+                    </li>
+                    <li class="nav-item" id="name">
+                        <a class="nav-link" href="#">Name </a>
+                    </li>
+                    <li class="nav-item" id="brewery">
+                        <a class="nav-link" href="#">Brewery</a>
+                    </li>
+                    <li class="nav-item" id="style">
+                        <a class="nav-link" href="#">Beer Style</a>
+                    </li>
+                    <li class=-"nav-item" id="distance">
+                        <a class="nav-link" href="#">Distance</a>
+                    </li>
+                </ul class = "navbar-nav navbar-right ml-auto route-buttons" style="float: right" >
+                <a class="nav-link" id="routebtn" style="float: right">Route</a>
+                <a class="nav-link" id="clearroute" style="float:right;">Clear Route</a>
+            </div>
+        </nav>
+        
+    <!-- ====================== CARDS ==========================-->
+    <div class = "card-div" id="cards">
+    
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>   
+    
+</body>
+
+</head>
+
+</html>
